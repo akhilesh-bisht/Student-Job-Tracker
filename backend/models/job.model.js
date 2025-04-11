@@ -9,7 +9,7 @@ const jobSchema = new Schema({
     enum: ["Applied", "Interview", "Offer", "Rejected"],
     default: "Applied",
   },
-  appliedDate: { type: Date, default: Date.now },
+  appliedDate: { type: Date },
   link: String,
 });
 

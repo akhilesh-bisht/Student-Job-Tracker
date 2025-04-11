@@ -23,7 +23,7 @@ export default function useJobApi() {
 
   const updateJobStatus = async (id, newStatus) => {
     try {
-      await axios.patch(`${API_BASE_URL}/${id}`, {
+      await axios.patch(`${API_BASE_URL}/${id}/status`, {
         status: newStatus,
       });
       return true;
