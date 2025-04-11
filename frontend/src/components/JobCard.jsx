@@ -57,11 +57,6 @@ export default function JobCard({ job, onDelete, onStatusChange }) {
         </select>
 
         <div className="flex gap-2">
-          <Link to={`/edit/${job._id}`}>
-            <button className="p-2 rounded hover:bg-gray-100">
-              <Pencil className="w-4 h-4 text-gray-600" />
-            </button>
-          </Link>
           <button
             onClick={() => onDelete(job._id)}
             className="p-2 rounded hover:bg-red-100"

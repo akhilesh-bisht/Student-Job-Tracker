@@ -1,4 +1,3 @@
-// pages/Dashboard.jsx
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useJobApi from "../hooks/useJobApi";
@@ -49,6 +48,11 @@ export default function Dashboard() {
     }
   };
 
+  const statusCounts = jobs.reduce((acc, job) => {
+    acc[job.status] = (acc[job.status] || 0) + 1;
+    return acc;
+  }, {});
+
   const filteredJobs = jobs
     .filter((job) => {
       const matchStatus = statusFilter === "All" || job.status === statusFilter;
@@ -85,6 +89,19 @@ export default function Dashboard() {
         </Link>
       </div>
 
+      {/* ✅ Status Counters */}
+      <div className="flex flex-wrap gap-4 mb-4">
+        {Object.entries(statusCounts).map(([status, count]) => (
+          <div
+            key={status}
+            className="px-4 py-2 bg-white border border-gray-200 rounded-lg shadow-sm text-sm text-gray-700"
+          >
+            {status}: <span className="font-bold">{count}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Filters */}
       <Filters
         startDate={startDate}
         endDate={endDate}

@@ -1,51 +1,37 @@
-# Student-Job-Tracker
-
-# 📝 Job Tracker App
-
+Student-Job-Tracker
+📝 Job Tracker App
 A simple job tracking web application that helps you keep track of job applications you've submitted. You can add, update, delete, and filter job entries by date and status.
 
 Built using:
 
-- ⚛️ React (Frontend)
-- 🎨 Tailwind CSS (UI Styling)
-- 🚀 Express + MongoDB (Backend)
-- 🔐 JWT Auth (Login & Signup)
-
----
-
-## ✨ Features
-
-- Add and edit job applications with company, role, date, status, and link
-- Filter jobs by:
-  - Application status (Applied, Interview, Offer, Rejected)
-  - Date range
-- Update job status directly from the dashboard
-- Delete jobs
-- Login & Signup with JWT authentication
-- Responsive modern UI
-
----
-
-## 📸 Demo
-
+⚛️ React (Frontend)
+🎨 Tailwind CSS (UI Styling)
+🚀 Express + MongoDB (Backend)
+🔐 JWT Auth (Login & Signup)
+✨ Features
+Add and edit job applications with company, role, date, status, and link
+Filter jobs by:
+Application status (Applied, Interview, Offer, Rejected)
+Date range
+Update job status directly from the dashboard
+Delete jobs
+Login & Signup with JWT authentication
+Responsive modern UI
+📸 Demo
 Coming soon...
 
----
+🚀 Getting Started
 
-## 🚀 Getting Started
-
-### 1. Clone the repo
-
-```bash
-git clone https://github.com/your-username/job-tracker-app.git
-cd job-tracker-app
+1. Clone the repo
+   git clone https://github.com/your-username/job-tracker-app.git
+   cd job-tracker-app
 2. Setup Backend (Express + MongoDB)
-bash
-Copy
-Edit
-cd backend
-npm install
-Add a .env file with:
+   bash
+   Copy
+   Edit
+   cd backend
+   npm install
+   Add a .env file with:
 
 env
 Copy
@@ -58,8 +44,7 @@ Start backend server:
 bash
 Copy
 Edit
-npm start
-3. Setup Frontend (React + Tailwind)
+npm start 3. Setup Frontend (React + Tailwind)
 bash
 Copy
 Edit
@@ -75,10 +60,11 @@ css
 Copy
 Edit
 📁 backend
+
+└── config
 ├── models
 ├── routes
 ├── controllers
-├── middleware
 └── server.js
 
 📁 frontend
@@ -87,11 +73,7 @@ Edit
 ├── pages
 ├── App.jsx
 └── main.jsx
-
-```
-
-Part 2 - AI Tools
-Tool Used: ChatGPT
+Part 2 - AI Tools Tool Used: ChatGPT
 
 How I Used It:
 
