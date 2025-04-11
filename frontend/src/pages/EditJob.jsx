@@ -46,7 +46,7 @@ function EditJob() {
     e.preventDefault();
     setLoading(true);
     try {
-      await axios.put(`http://localhost:5000/api/jobs/${id}`, formData);
+      await axios.put(`http://localhost:5000/api/jobs/${id}/status`, formData);
       alert("Job updated successfully.");
       navigate("/");
     } catch (err) {

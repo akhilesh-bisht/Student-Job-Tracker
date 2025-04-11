@@ -3,7 +3,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import jobRoutes from "./routes/jobRoutes.js";
 import connectDB from "./config/db.js";
-
+import userRoutes from "./routes/userRoute.js";
 dotenv.config(); // Load env variables
 
 const app = express();
@@ -17,6 +17,9 @@ app.use(express.json()); // Handles JSON payloads
 
 // Routes
 app.use("/api/jobs", jobRoutes);
+
+// auth routes
+app.use("/api/user", userRoutes);
 
 // Fallback route for unmatched paths
 app.use((req, res, next) => {
