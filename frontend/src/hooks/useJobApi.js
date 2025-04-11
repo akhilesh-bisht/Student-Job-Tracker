@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:5000/api/jobs";
+const API_BASE_URL = "https://student-job-tracker-fnbb.onrender.com/api/jobs";
 
 export default function useJobApi() {
   const fetchJobs = async () => {

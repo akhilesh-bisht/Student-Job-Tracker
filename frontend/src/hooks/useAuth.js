@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const BASE_URL = "http://localhost:5000/api/user";
+const BASE_URL = "https://student-job-tracker-fnbb.onrender.com/api/user";
 
 export default function useAuth() {
   const [user, setUser] = useState(null);

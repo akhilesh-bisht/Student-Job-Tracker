@@ -29,11 +29,15 @@ export default function AddJob() {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/api/jobs", formData, {
-        headers: {
-          Authorization: `Bearer ${user?.token}`,
-        },
-      });
+      await axios.post(
+        "https://student-job-tracker-fnbb.onrender.com/api/jobs",
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${user?.token}`,
+          },
+        }
+      );
       showToast({
         title: "Job added",
         description: "Your job application has been added successfully.",
@@ -51,7 +55,7 @@ export default function AddJob() {
     }
   };
 
-  // 🚫 Show login message if user is not logged in
+  // Show login message if user is not logged in
   if (!user) {
     return (
       <div className="flex items-center justify-center h-[70vh] text-center px-4">
@@ -73,16 +77,16 @@ export default function AddJob() {
     );
   }
 
-  // ✅ Show the form if user is logged in
+  // Show the form if user is logged in
   return (
     <div className="max-w-3xl mx-auto p-6">
-      <h1 className="text-3xl font-semibold text-gray-900 dark:text-white mb-8">
+      <h1 className="text-3xl font-semibold text-gray-900  mb-8">
         Add New Job Application
       </h1>
 
       <form
         onSubmit={handleSubmit}
-        className="space-y-6 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-md"
+        className="space-y-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-md"
       >
         {/* Company */}
         <div>
