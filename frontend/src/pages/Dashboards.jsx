@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import useJobApi from "../hooks/useJobApi";
 import { isAfter, isBefore } from "date-fns";
 import JobCard from "../components/JobCard";
-import Filters from "../components/filters";
+import Filters from "../components/filters.jsx";
 
 export default function Dashboard() {
   const { fetchJobs, deleteJob, updateJobStatus } = useJobApi();
