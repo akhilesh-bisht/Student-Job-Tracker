@@ -10,9 +10,10 @@ export default function AddJob() {
     company: "",
     role: "",
     status: "Applied",
-    appliedDate: "",
+    appliedDate: new Date().toISOString().split("T")[0],
     link: "",
   });
+
   const [loading, setLoading] = useState(false);
 
   const showToast = ({ title, description }) => {
@@ -21,7 +22,10 @@ export default function AddJob() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   const handleSubmit = async (e) => {
@@ -160,11 +164,9 @@ export default function AddJob() {
           </label>
           <input
             type="date"
-            id="date"
-            name="date"
-            value={formData.date}
+            name="appliedDate"
+            value={formData.appliedDate}
             onChange={handleChange}
-            required
             className="w-full rounded-md border border-gray-300 dark:border-gray-600 p-3 bg-gray-50 dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
           />
         </div>

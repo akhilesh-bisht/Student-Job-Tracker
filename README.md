@@ -87,27 +87,32 @@ Edit
 ├── pages
 ├── App.jsx
 └── main.jsx
-✅ Todo / Improvements
 
-
- Add tags/notes to job entries
-
- Export job list to CSV
-
- Deploy to Vercel/Render
-
-💡 Credits
-UI inspired by modern dashboard apps and powered by Tailwind CSS.
-Icons by Lucide.
-
-📄 License
-This project is licensed under the MIT License.
-
-yaml
-Copy
-Edit
-
----
-
-Let me know if you want to include screenshots, a live demo link, or contribution instructions!
 ```
+
+Part 2 - AI Tools
+Tool Used: ChatGPT
+
+How I Used It:
+
+Broke down the entire project into manageable tasks and suggested a timeline.
+
+Provided guidance and starter code to create a clean and responsive login page using React and Tailwind CSS.
+
+Helped generate commented code snippets for better readability and learning.
+
+Assisted in resolving deployment-related errors during Vercel and Render setup.
+
+How It Helped:
+
+Improved code readability by suggesting comments and organizing the folder structure.
+
+Made it easier to learn and understand Express routing, middleware usage, and Mongoose setup.
+
+Manual Changes Made:
+
+I rewrote and styled UI components to match my design preference.
+
+Customized the API routes and added validation logic manually.
+
+Refined database models and included additional fields as per project requirements.
